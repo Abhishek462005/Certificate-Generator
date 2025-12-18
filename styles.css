@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.form-section {
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preview-section {
+    padding: 40px;
+    background: white;
+}
+
+.preview-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.8em;
+}
+
+.certificate {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.certificate-border {
+    padding: 20px;
+    background: linear-gradient(45deg, #f0f0f0, #ffffff);
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+}
+
+.certificate-content {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    position: relative;
+}
+
+.certificate-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.certificate-body {
+    margin: 40px 0;
+}
+
+.presented-to {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.student-name {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin: 20px 0;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #d4af37;
+    text-underline-offset: 10px;
+}
+
+.completion-text {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px 0;
+}
+
+.course-name {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin: 20px 0;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.completion-date {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 30px;
+}
+
+.certificate-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.signature-section {
+    text-align: left;
+}
+
+.signature-line {
+    width: 200px;
+    height: 2px;
+    background: #333;
+    margin-bottom: 10px;
+}
+
+.instructor-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.instructor-title {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.seal {
+    text-align: right;
+}
+
+.seal-circle {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f9f9f9, #ffffff);
+}
+
+.seal-circle span {
+    font-size: 2em;
+}
+
+.status-message {
+    padding: 20px;
+    margin: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.status-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.status-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.status-message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    header {
+        padding: 30px 20px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .form-section, .preview-section {
+        padding: 20px;
+    }
+    
+    .certificate-content {
+        padding: 20px;
+    }
+    
+    .certificate-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .student-name {
+        font-size: 1.6em;
+    }
+    
+    .certificate-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .signature-section {
+        text-align: center;
+    }
+    
+    .seal {
+        text-align: center;
+    }
+}

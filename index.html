@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Certificate Generator</h1>
+            <p>Generate your personalized certificate and receive it via email</p>
+        </header>
+
+        <div class="form-section">
+            <form id="certificateForm">
+                <div class="form-group">
+                    <label for="studentName">Full Name:</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentEmail">Email Address:</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="courseName">Course Name:</label>
+                    <input type="text" id="courseName" name="courseName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="completionDate">Completion Date:</label>
+                    <input type="date" id="completionDate" name="completionDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructorName">Instructor Name:</label>
+                    <input type="text" id="instructorName" name="instructorName" required>
+                </div>
+
+                <button type="submit" id="generateBtn">
+                    <span id="btnText">Generate & Send Certificate</span>
+                    <span id="loadingSpinner" class="spinner" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+
+        <div class="preview-section">
+            <h2>Certificate Preview</h2>
+            <div id="certificatePreview" class="certificate">
+                <div class="certificate-border">
+                    <div class="certificate-content">
+                        <div class="certificate-header">
+                            <h1>Certificate of Completion</h1>
+                        </div>
+                        
+                        <div class="certificate-body">
+                            <p class="presented-to">This is to certify that</p>
+                            <h2 class="student-name" id="previewName">[Student Name]</h2>
+                            <p class="completion-text">has successfully completed the course</p>
+                            <h3 class="course-name" id="previewCourse">[Course Name]</h3>
+                            <p class="completion-date">on <span id="previewDate">[Date]</span></p>
+                        </div>
+                        
+                        <div class="certificate-footer">
+                            <div class="signature-section">
+                                <div class="signature-line"></div>
+                                <p class="instructor-name" id="previewInstructor">[Instructor Name]</p>
+                                <p class="instructor-title">Course Instructor</p>
+                            </div>
+                            <div class="seal">
+                                <div class="seal-circle">
+                                    <span>🎓</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
